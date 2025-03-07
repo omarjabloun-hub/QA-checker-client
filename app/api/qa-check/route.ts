@@ -12,7 +12,7 @@ export async function GET(request: Request) {
 
   try {
     // Call the real service
-    const response = await fetch("https://lucky-marginally-squirrel.ngrok-free.app/api/analyze", {
+    const response = await fetch(process.env.QA_ANALYZER_URL!, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

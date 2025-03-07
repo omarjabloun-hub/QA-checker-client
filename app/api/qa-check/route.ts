@@ -12,7 +12,7 @@ export async function GET(request: Request) {
 
   try {
     // Call the real service
-    const response = await fetch(process.env.QA_ANALYZER_URL!, {
+    const response = await fetch("https://qualityassurance-analyzer.onrender.com/api/analyze", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
